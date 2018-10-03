@@ -17,8 +17,6 @@ def urun_sorgulama(l):
     if(isLogon_response.status_code == 200):
         sorgu_response = l.client.get("/Product/GetProductDetail", params=values, allow_redirects=True)
 
-
-
 class MyTaskSet(TaskSet):
     tasks = {login: 2, urun:1, urun_sorgulama:1}
 

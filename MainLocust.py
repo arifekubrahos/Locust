@@ -1,17 +1,22 @@
 from LoginPhase import ITSLogin
-from  UrunSorguPhase import ITSUrunSorgu
-from locust import Locust,TaskSet, task,HttpLocust
+from UrunSorguPhase import ITSUrunSorgu, ITSLogin
+from locust import TaskSet, task,HttpLocust, seq_task
 class UrunTask(TaskSet):
 
     def on_start(self):
         self.urun = ITSUrunSorgu(self.client)
 
+    @task(2)
+    def login(self):
+        self.urun.Login()
+
     @task(1)
     def urun_sorgu(self):
+        self.urun.isLogon()
         if self.urun.account_login:
             self.urun.urun()
         else:
-            self.urun.isLogon()
+            self.urun.Login()
 
 
     @task(1)

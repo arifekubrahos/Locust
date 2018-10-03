@@ -2,24 +2,23 @@ from LoginPhase import ITSLogin
 
 class ITSUrunSorgu():
     def __init__(self, client):
-        self.login_object = ITSLogin(client)
         self.client = client
+        self.login = ITSLogin(client)
         self.account_login = False
 
+    def Login(self):
+        self.login.Login()
+        if self.login.is_login:
+            self.account_login = True
 
     def isLogon(self):
-        if self.login_object.is_login:
-            response = self.client.get("/Account/IsLogon")
-
-            if response.ok:
-                self.log_success("Kullanici iceride" + "\n")
-                self.account_login = True
-            else:
-                self.login_object.Login()
-                self.log_error("Kullanici disarida, Status code: " + str(response.status_code) + "\n")
-                self.account_login = False
+        response = self.client.get("/Account/IsLogon")
+        if response.text == "true":
+            self.log_success("Kullanici iceride" + "\n")
+            self.account_login = True
         else:
-            self.login_object.Login()
+            self.log_error("Kullanici disarida, Status code: " + str(response.status_code) + "\n")
+            self.account_login = False
 
     def urun(self):
         response = self.client.get("/urun/urun_sorgulama")
@@ -58,7 +57,7 @@ class ITSUrunSorgu():
             self.log_error("urun hareketleri failed, Status code: "+ str(response.status_code)+ "\n")
 
     def get_stakeholder(self):
-        variables = {"gtin":""}
+        variables = {"gln":""}
         response = self.client.post("/Stakeholder/GetStakeholder",params=variables)
         if response.ok:
             self.log_success("getstakeholder success " + "\n")
