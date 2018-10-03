@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kullanýcý Giriþi</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="//fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="/Content/img/favicon.png" />
+
+
+    <link href="/Content/plugins/font-awesome/css/ltr/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/plugins/simple-line-icons/ltr/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="/Content/plugins/bootstrap/css/ltr/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/css/ltr/components.min.css" rel="stylesheet" />
+    <link href="/Content/css/ltr/site.min.css?vs1.0" rel="stylesheet" />
+
+    <script src="/Content/js/jquery.min.js"></script>
+</head>
+<body class="login">
+    <div id="PageLoadGif">
+        <div class="LoadingDiv">
+            <img src="/Content/img/loading.gif" />
+        </div>
+    </div>
+
+    <div class="content">
+        <form class="login-form" id="login-form" action="/Home" method="post" onkeypress="if(event.keyCode == 13) Login();" data-parsley-validate>
+            <div class="LoginContent" >
+                <div class="LoginInput">
+
+                    <img src="/Content/img/logoLogin.png" />
+                    <h3>ÝTS-MC</h3>
+                    <div id="UserDiv">
+                        <div class="col-md-12 margin-top-30">
+                            <div class="form-group form-md-line-input form-md-floating-label">
+                                <i class="icon-user"></i>
+                                <input id="caps" type="email" tabindex="1" class="form-control" autocomplete="off" placeholder="E-posta" name="_email" required>
+                                <i class="fa"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group form-md-line-input form-md-floating-label">
+                                <i class="icon-lock"></i>
+                                <input class="form-control" tabindex="2" type="password" autocomplete="off" id="password" placeholder="Þifre" name="_password" required>
+                                <i class="fa"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <a href="/hesap_yonetimi/sifremi_unuttum" tabindex="4">
+                                Þifremi unuttum
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="fixed-action-btn pull-right margin-top-10" style="margin-top:20px !important;">
+                                <a class="btn-floating btn-lg btn green" tabindex="5" onclick="Login();">
+                                    <i class="fa fa-check"></i>
+                                    <span>Giriþ</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="LoginLogo" style="background-image: url('../../Content/img/scantran-system.jpg');background-size: cover;background-position: center;">
+                    
+                   
+                </div>
+         
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
+    <!-- BEGIN CORE PLUGINS -->
+    <script src="/Content/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="/Content/js/app.min.js"></script>
+    <script src="/Content/js/site.min.js"></script>
+    <script src="/Content/plugins/parsley/parsley.min.js"></script>
+
+
+        <script src="../../Content/plugins/parsley/i18n/en.js"></script>
+
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <script type="text/javascript">
+    function refreshImage()
+        {
+            $('#captcha').attr('src', '/Account/CaptchaImage?prefix=Login&amp;noisy=False&e=' + Math.floor((Math.random() * 100) + 1));
+        }
+    function Login() {
+        PageLoadGifSmall('.LoginContent');
+        if (PageValidate("#login-form")) {
+            var url = '/Account/Login';
+            $.ajax({
+                url: url,
+                data: $('#login-form').serialize(),
+                type: 'POST',
+                async: true,
+                success: function (data) {
+                    if (data.Success) {
+                        window.location.href = '/urun/urun_sorgulama';
+                    }
+                    else {
+                        refreshImage();
+                        $("#captcha_val").val('');
+                        ErrorText(data.ResponseMessage);
+                        $('#password').val('');
+                        $(".form-group.form-md-line-input.form-md-floating-label i.fa.fa-check").fadeOut("fast");
+                        PageUnloadGifSmall(".LoginContent");
+                    }
+
+                },
+                error: function (data) {
+                    ErrorText('iþlem sýrasýnda hata oluþtu');
+                    PageUnloadGifSmall(".LoginContent");
+                }
+            });
+        } else {
+            PageUnloadGifSmall(".LoginContent");
+        }
+
+    }
+
+    </script>
+</body>
+</html>
