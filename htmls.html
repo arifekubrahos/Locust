@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="version 0.22.1" />
-    <title>&#220;R&#220;NLER / &#220;R&#220;N SORGULAMA</title>
+    <title>&#220;R&#220;NLER / RE&#199;ETE SORGULAMA</title>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="//fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
 
@@ -99,7 +99,7 @@
 
             <ul class="Bread">
                 <li><a href="/"><i class="icon-home"></i>Anasayfa</a><span>/</span></li>
-                <li><a href="javascript:void(0);">&#220;R&#220;NLER / &#220;R&#220;N SORGULAMA</a></li>
+                <li><a href="javascript:void(0);">&#220;R&#220;NLER / RE&#199;ETE SORGULAMA</a></li>
                 
             </ul>
 
@@ -299,112 +299,228 @@
                 
 
 
-<script src="/Content/js/datamatrix.js"></script>
-<div class="portlet light portlet-fit portlet-datatable bordered" id="portlet_ticket_list">
-    <div class="portlet-title">
-        <div class="caption">
-            <span class="caption-subject"><i class="icon-grid"></i> Ürün Sorgulama</span>
-        </div>
-    </div>
-    <div class="portlet-body">
-        <div class="col-md-6">
-            <div class="portletBox" id="portlet_product_query">
-                <h3><i class="icon-layers"></i> GTIN-SN</h3>
-                <form id="Form_Product_Query">
-                    <div class="col-md-5">
-                        <div class="form-group form-md-line-input form-md-floating-label">
-                            <input class="form-control GTIN" id="GTIN" type="text" onkeypress="return isNumberKey(event)" maxlength="14" data-parsley-minlength="14" required />
-                            <label>GTIN</label>
-                            <i class="fa"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="form-group form-md-line-input form-md-floating-label">
-                            <input class="form-control SN" id="SN" type="text" style="text-transform:uppercase;" onkeypress="return alphaNumeric(event)" maxlength="20" required />
-                            <label>SN</label>
-                            <i class="fa"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="javascript:void(0)" class="btn sbold green margin-top-10 tooltips" onclick="Product_Query(); return false;" data-placement="top" data-original-title="Sorgula"><i class="fa fa-search"></i> </a>
-                    </div>
+<div id="portlet_prescription_list">
+    <div style="position:relative;">
+        <div class="portlet light bordered FilterPortlet">
+            <div class="portlet-title">
 
-                </form>
-                <script type="text/javascript">
-                function Product_Query() {
-                    if (!CheckLogin())
-                    {
-                        return;
-                    }
-                        var url = '/Product/GetProductDetail';
-                        if (PageValidate('#Form_Product_Query')) {
-                            PageLoadGif('show');
-                            $.ajax({
-                                url: url,
-                                dataType: "html",
-                                data: { gtin: $('#GTIN').val(), sn: $('#SN').val().toUpperCase() },
-                                type: 'GET',
-                                success: function (data) {
-                                    $('#portlet_product_query_result').html(data);
-                                    $('#portlet_product_operation_list').hide();
-                                    $('#portlet_detail').hide();
-                                    PageLoadGif('hide');
-                                },
-                                error: function (data) {
-                                    PageLoadGif('hide');
-                                    ErrorText('Sistemde bu GTIN-SN ye ait ürün bulunamadý.');
-
-                                }
-                            });
-
-                        }
-                }
-
-                </script>
-                <div class="clearfix"></div>
-            </div>
-
-        </div>
-
-        <div class="col-md-6">
-            <div class="portletBox">
-                <div class="clearfix"></div>
-                <h3><i class="icon-layers"></i> Barkod Okuyucu ile Sorgula</h3>
-                <div class="alert alert-info">Fare imlecini yazý yazma yerinin üzerine getirerek barkodu okutunuz.</div>
-                <div class="clearfix"></div>
-                <div class="form-group form-md-line-input form-md-floating-label">
-                    <input type="text" class="form-control" id="datamatrix" onkeypress="datamatrix_keypress(event);" maxlength="100" onkeydown="return datamatrix_keydown(event);" />
-                    <label for="DM">Barkod</label>
+                <div class="caption">
+                    <span class="caption-subject"> Reçete Sorgulama</span>
                 </div>
-                <div class="clearfix"></div>
             </div>
+            <div class="col-md-6" id="prescSearch" data-parsley-validate>
+                <div class="form-group form-md-line-input form-md-floating-label">
+                    <input class="form-control" id="_presc_record_number" type="text"  style="text-transform:uppercase;" onkeypress="return presCharSet(event)"  required/>
+                    <label>Reçete Kayýt Numarasý</label>
+                </div>
+            </div>
+            
             <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
-        <div class="col-md-12">
-            <div id="portlet_product_query_result"></div>
-
+        <div class="filterFixed ">
+            <a class="btn-floating FilterButon btn-lg btn blue tooltips" data-placement="bottom" data-original-title="Sorgula" onclick="loadTable(); return false;">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+        <div class="filterFixedClear">
+            <a class="btn-floating ClearButon btn-lg btn red tooltips" id="ClearButon" data-placement="top" data-original-title="Temizle" onclick="FilterClear();">
+                <i class="fa fa-close"></i>
+            </a>
+        </div>
+    </div>
+    <div class="portlet light portlet-fit portlet-datatable bordered">
+        <div class="portlet-title">
+            <div class="caption">
+                <span class="caption-subject"><i class="icon-users"></i> Reçete Sorgulama Sonuçlarý</span>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <table id="tablePrescription" class="table table-striped table-bordered table-hover dataTable no-footer">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Bildirim ID</th>
+                        <th>Reçete Kayýt No</th>
+                        <th>Eczane ID</th>
+                        <th>Reçete Tarihi</th>
+                        <th>Hasta</th>
+                        <th>Doktor</th>
+                        <th>Eczane </th>
+                        <th>Geri Ödeme Kurumu </th>
+                        <th>Sonlanmýþ mý?</th>
+                    </tr>
+                </thead>
+            </table>
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
 </div>
-<div class="clearfix"></div>
 <div id="portlet_detail"></div>
-<div id="portlet_notification_detail"></div>
-<script>
+
+<div id="popup-content"></div>
+
+<script type="text/javascript">
+    var table;
+    function prescriptionDetail(notificationId)
+    {
+        if (!CheckLogin()) {
+            return;
+        }
+        PageLoadGif('show');
+        var url = '/Product/PrescriptionDetail';
+        $.ajax({
+            url: url,
+            type: 'GET',
+            data: { notificationId: notificationId },
+            async: false,
+            success: function (data) {
+                if (data) {
+                    $('#portlet_detail').html(data);
+                    //$('#portlet_filter').hide();
+                    $('#portlet_prescription_list').hide();
+                    InputControl();
+
+                    PageLoadGif('hide');
+                }
+                else {
+                    ErrorText('Ýþlem sýrasýnda bir hata oluþtu!');
+                }
+                PageLoadGif('hide');
+            },
+            error: function (data) {
+                ErrorText('Ýþlem sýrasýnda bir hata oluþtu!');
+                PageLoadGif('hide');
+            }
+        });
+    }
+
+
+    $(document).ready(function () {
+        $('#_pharmacy_Id').select2({
+            minimumInputLength: 3,
+            language: "tr",
+        ajax: {
+            url: '/Product/SearchStakeholder?type=PHARMACY',
+             dataType: 'json',
+             delay: 400,
+             processResults: function (data) {
+                 return {
+                     results: data
+                 };
+             },
+             cache: false
+         }
+        });
+
+        $('#_destionation_gln').select2({
+            minimumInputLength: 3,
+            language: "tr",
+        ajax: {
+            url: '/Product/SearchStakeholder?type=REI_AGENCY',
+             dataType: 'json',
+             delay: 400,
+             processResults: function (data) {
+                 return {
+                     results: data
+                 };
+             },
+             cache: false
+         }
+        });
+
+
+        //loadTable();
+    });
+
+    function loadTable() {
+        if (!CheckLogin()) {
+            return;
+        }
+        if (PageValidate('#prescSearch')) {
+            table = $('#tablePrescription').DataTable({
+                "bServerSide": true,
+                "bFilter": false,
+                "ordering": false,
+                "destroy": true,
+                responsive: true,
+                "deferLoading": 0,
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    aoData.push({ "name": "_presc_record_number", "value": $('#_presc_record_number').val().toUpperCase() });
+                    //aoData.push({ "name": "_pharmacy_Id", "value": $('#_pharmacy_Id').val() });
+                    //aoData.push({ "name": "_destionation_gln", "value": $('#_destionation_gln').val() });
+                    //aoData.push({ "name": "_prescription_date", "value": $('#_prescription_date').val() });
+                    $.getJSON(sSource, aoData, function (json) {
+                        fnCallback(json);
+                    });
+                },
+                "orderable": false,
+                "bSortable": false,
+                "bSortCellsTop": false,
+                "sAjaxSource": '/Product/GetPrescriptionList',
+                "bProcessing": true,
+                "columnDefs": [
+                    {
+                        "render": function (data, type, row) {
+                            return "<a onclick=\"prescriptionDetail('" + row[1] + "');\">" + row[1] + "</a>";
+                        }, "targets": 1
+                    },
+                    {
+                        "render": function (data, type, row) {
+                            return "<a href='#NewModal' onclick='getStakeholder(" + row[7] + ")' data-toggle='modal'>" + row[7] + "</a>"
+                        }, "targets": 7
+                    },
+                    {
+                        "render": function (data, type, row) {
+                            return "<a href='#NewModal' onclick='getStakeholder(" + row[8] + ")' data-toggle='modal'>" + row[8] + "</a>"
+                        }, "targets": 8
+                    },
+                    { "visible": false, "targets": [0] }],
+                "dom": '<"top"if>rt<"bottom"lp><"clear">',
+                "language": {
+                    "url": DataTableLanguage
+                }
+            });
+            table.draw('page');
+        }
+        else {
+            ParslySelected();
+        }
+    }
+
     function Reload_List(refresh) {
         if (!CheckLogin()) {
             return;
         }
         if (refresh && table != null)
             table.ajax.reload(null, false);
-        $('#portlet_ticket_list').show();
-        $('#portlet_product_query_result').show();
+        $('#portlet_prescription_list').show();
         $('#portlet_detail').html('');
-        $('#portlet_notification_detail').html('');
+        $('#popup-content').html('');
     }
+function getStakeholder(gln) {
+    if (!CheckLogin()) {
+        return;
+    }
+        var url = '/Stakeholder/GetStakeholder';
+
+        $.ajax({
+            url: url,
+            data: { gln: gln },
+            type: 'POST',
+            success: function (data) {
+
+                $('#InfoModal').modal('show');
+                $('#ModalHeader h4').text('Paydaþ Ayrýntýlarý');
+                $('#InfoModalArea').html(data);
+            },
+            error: function (data) {
+
+            }
+
+        });
+    }
+
 </script>
             </div>
         </div>

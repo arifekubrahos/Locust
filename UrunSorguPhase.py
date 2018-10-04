@@ -26,16 +26,15 @@ class ITSUrunSorgu():
             self.log_error("Urun failed, Status code: "+ str(response.status_code)+ "\n")
         else:
             self.log_success("Urun success" +"\n")
-            self.write_html(response.text)
+            #self.write_html(response.text)
 
 
     def gtin_sn(self):
-        variables = {"gtin":"", "sn":"",
-                     }
+        variables = {"gtin":"", "sn":""}
         response = self.client.get("/Product/GetProductDetail", params=variables, allow_redirects=True)
         if response.ok:
             self.log_success("Urun sorgu success"+ "\n")
-            self.write_html(response.text)
+            #self.write_html(response.text)
         else:
             self.log_error("urun sorgu error, Status code: "+ str(response.status_code)+ "\n")
 
@@ -52,7 +51,7 @@ class ITSUrunSorgu():
         response = self.client.get("/Product/GetOperationList", params=variables, allow_redirects=True)
         if response.ok:
             self.log_success("urun hareketleri success "+"\n")
-            self.write_html(response.text)
+            #self.write_html(response.text)
         else:
             self.log_error("urun hareketleri failed, Status code: "+ str(response.status_code)+ "\n")
 
@@ -61,7 +60,7 @@ class ITSUrunSorgu():
         response = self.client.post("/Stakeholder/GetStakeholder",params=variables)
         if response.ok:
             self.log_success("getstakeholder success " + "\n")
-            self.write_html(response.text)
+            #self.write_html(response.text)
         else:
             self.log_error("getstakeholder failed, Status code: " + str(response.status_code) + "\n")
 
@@ -80,3 +79,4 @@ class ITSUrunSorgu():
         with open("htmls.html", "w") as file:
             file.write(text)
         pass
+

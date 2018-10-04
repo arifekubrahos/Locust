@@ -1,60 +1,262 @@
-2018-10-03 16:40:13.784573
+2018-10-04 10:30:01.459358
 Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:40:14.823661
+2018-10-04 10:30:02.216270
 Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:40:15.945356
+2018-10-04 10:30:03.220047
 Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:40:16.772323
+2018-10-04 10:30:04.235050
 Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:40:17.832851
+2018-10-04 10:30:05.265560
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:30:11.349237
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:30:11.398103
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+2018-10-04 10:30:18.543064
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+2018-10-04 10:30:22.542049
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:30:25.212364
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+2018-10-04 10:30:34.498643
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+Kullanici iceride
+Kullanici iceride
+recete success
+recete success
+Kullanici iceride
+Kullanici iceride
+recete success
+recete success
+2018-10-04 10:30:45.451947
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+2018-10-04 10:30:54.632242
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+Kullanici iceride
+recete success
+recete success
+2018-10-04 10:31:07.149118
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:31:13.608775
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+recete success
+Kullanici iceride
+2018-10-04 10:32:19.964619
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:21.302434
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:22.582158
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:22.609085
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:23.407840
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:28.809985
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+recete success
+2018-10-04 10:32:34.257613
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:35.979164
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+urun hareketleri success 
+2018-10-04 10:32:42.298941
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:42.694972
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+Urun sorgu success
+2018-10-04 10:32:45.388078
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+Kullanici iceride
+urun hareketleri success 
+2018-10-04 10:32:51.094908
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:55.280490
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:32:56.280314
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+getstakeholder success 
+2018-10-04 10:32:57.926145
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+Kullanici iceride
+getstakeholder success 
+2018-10-04 10:33:01.994423
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+Kullanici iceride
+Urun success
+Kullanici iceride
+Urun sorgu success
+2018-10-04 10:33:10.898802
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:33:14.240602
+Login success: {"Success":true,"ResponseMessage":""}
+2018-10-04 10:33:17.718221
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+getstakeholder success 
+Kullanici iceride
+Urun sorgu success
+Kullanici iceride
+recete success
+2018-10-04 10:33:22.996775
+Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+urun hareketleri success 
+2018-10-04 10:33:28.052315
 Login success: {"Success":true,"ResponseMessage":""}
 Kullanici iceride
 Urun success
-2018-10-03 16:40:25.419173
-Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:40:26.631531
-Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:40:27.410024
+2018-10-04 10:33:32.667576
 Login success: {"Success":true,"ResponseMessage":""}
 Kullanici iceride
-Urun success
-2018-10-03 16:40:33.305736
+recete success
+2018-10-04 10:33:34.018304
 Login success: {"Success":true,"ResponseMessage":""}
 Kullanici iceride
-Urun success
-2018-10-03 16:40:36.060168
-Login success: {"Success":true,"ResponseMessage":""}
+getstakeholder success 
 Kullanici iceride
-Urun success
-2018-10-03 16:40:42.061069
-Login success: {"Success":true,"ResponseMessage":""}
+urun hareketleri success 
+Kullanici iceride
+recete success
+Kullanici iceride
+urun hareketleri success 
 Kullanici iceride
 Urun success
 Kullanici iceride
 Urun success
 Kullanici iceride
-Urun success
-2018-10-03 16:40:48.501669
-Login success: {"Success":true,"ResponseMessage":""}
+recete success
 Kullanici iceride
-Urun success
-2018-10-03 16:40:55.002688
-Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:40:55.967734
-Login success: {"Success":true,"ResponseMessage":""}
+Urun sorgu success
 Kullanici iceride
-Urun success
-2018-10-03 16:40:57.529270
-Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:41:01.532111
-Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:41:02.481183
-Login success: {"Success":true,"ResponseMessage":""}
+Urun sorgu success
 Kullanici iceride
 Urun success
 Kullanici iceride
 Urun success
-2018-10-03 16:41:09.974185
-Login success: {"Success":true,"ResponseMessage":""}
-2018-10-03 16:41:10.146723
-Login success: {"Success":true,"ResponseMessage":""}
+Kullanici iceride
+Kullanici iceride
+getstakeholder success 
+Kullanici iceride
+urun hareketleri success 
+Kullanici iceride
+Urun success
+Kullanici iceride
+urun hareketleri success 
+Kullanici iceride
+recete success
+Kullanici iceride
+Urun sorgu success
+Kullanici iceride
+getstakeholder success 
+Kullanici iceride
+Urun success
+Kullanici iceride
+urun hareketleri success 
+Kullanici iceride
+urun hareketleri success 
+Kullanici iceride
+getstakeholder success 
+Kullanici iceride
+getstakeholder success 
+Kullanici iceride
+recete success
+Kullanici iceride
+getstakeholder success 
+Kullanici iceride
+Urun success
+Kullanici iceride
+urun hareketleri success 
+Kullanici iceride
+recete success
+Kullanici iceride
+Urun success
+Kullanici iceride
+Urun sorgu success
+Kullanici iceride
+Urun success
+Kullanici iceride
+urun hareketleri success 
+Kullanici iceride
+Kullanici iceride
+Kullanici iceride
+Kullanici iceride
+urun hareketleri success 
+Urun sorgu success
+getstakeholder success 
