@@ -12,13 +12,15 @@ class ITSUrunSorgu():
             self.account_login = True
 
     def isLogon(self):
-        response = self.client.get("/Account/IsLogon")
-        if response.text == "true":
-            self.log_success("Kullanici iceride" + "\n")
-            self.account_login = True
-        else:
-            self.log_error("Kullanici disarida, Status code: " + str(response.status_code) + "\n")
-            self.account_login = False
+        with self.client.get("/Account/IsLogon", catch_response=True) as response:
+            if response.content == b"false":
+                self.log_error("Kullanici disarida, Status code: " + str(response.status_code) + "\n")
+                self.account_login = False
+                response.failure("isLogin failure")
+            else:
+                self.log_success("Kullanici iceride" + "\n")
+                self.account_login = True
+                response.success()
 
     def urun(self):
         response = self.client.get("/urun/urun_sorgulama")
@@ -47,7 +49,7 @@ class ITSUrunSorgu():
             self.log_error("")
 
     def get_urun_hareketleri(self):
-        variables = {"gtin": "", "sn": ""}
+        variables = {"gtin": "", "sn": "", }
         response = self.client.get("/Product/GetOperationList", params=variables, allow_redirects=True)
         if response.ok:
             self.log_success("urun hareketleri success "+"\n")

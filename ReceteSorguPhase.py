@@ -1,5 +1,5 @@
 from  LoginPhase import ITSLogin
-
+#if you want to show table add  "iDisplayStart":"0","iDisplayLength":"10"
 class ITSReceteSorgu():
     def __init__(self, client):
         self.client = client
@@ -29,13 +29,23 @@ class ITSReceteSorgu():
             #self.write_html(response.text)
 
     def recete_sorgu(self):
-        varibles = {"_pres_record_number": ""}
-        response = self.client.get("/Product/GetPrescriptionList", params=varibles, allow_redirects= True )
+        variables = {"_pres_record_number": ""}
+
+        response = self.client.get("/Product/GetPrescriptionList", params=variables, allow_redirects= True )
         if response.ok:
             self.log_success("recete sorgu success" + "\n")
-            self.write_html(response.text)
+            #self.write_html(response.text)
         else:
             self.log_error("recete sorgu error, Status code: " + str(response.status_code) + "\n")
+
+    def recete_detail(self):
+        variables ={"notificationId":""}
+        response= self.client.get("/Product/PrescriptionDetail", params=variables, allow_redirects=True)
+        if response.ok:
+            self.log_success("recete detail success" + "\n")
+            #self.write_html(response.text)
+        else:
+            self.log_error("recete detail error, Status code: " + str(response.status_code) + "\n")
 
 
     def log_error(self, message):

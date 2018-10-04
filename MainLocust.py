@@ -24,6 +24,14 @@ class ReceteTask(TaskSet):
         else:
             self.recete.Login()
 
+    @task(1)
+    def recete_detail(self):
+        self.recete.isLogon()
+        if self.recete.account_login:
+            self.recete.recete_detail()
+        else:
+            self.recete.Login()
+
 class UrunTask(TaskSet):
 
     def on_start(self):
@@ -69,10 +77,11 @@ class LoginTask(TaskSet):
 
     def on_start(self):
         self.login = ITSLogin(self.client)
-
-    @task(5)
-    def login(self):
         self.login.Login()
+
+    def on_stop(self):
+        self.login.Logout()
+
 
 class MyLocust(HttpLocust):
     task_set = LoginTask
