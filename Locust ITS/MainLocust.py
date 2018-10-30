@@ -1,7 +1,7 @@
 from ReceteSorguPhase import ITSReceteSorgu
 from UrunSorguPhase import ITSUrunSorgu
 from LoginPhase import  ITSLogin
-from locust import TaskSet, task,HttpLocust, seq_task
+from locust import TaskSet, task,HttpLocust
 
 class ReceteTask(TaskSet):
 
@@ -15,6 +15,7 @@ class ReceteTask(TaskSet):
             self.recete.recete()
         else:
             self.recete.Login()
+
 
     @task(1)
     def recete_sorgu_sonucu(self):
@@ -46,7 +47,7 @@ class UrunTask(TaskSet):
             self.urun.Login()
 
 
-    @task(1)
+    @task(2)
     def urun_sorgu_gtin_sn(self):
         self.urun.isLogon()
         if self.urun.account_login:
@@ -72,8 +73,16 @@ class UrunTask(TaskSet):
         else:
             self.urun.Login()
 
+    @task(1)
+    def urun_get_drug(self):
+        self.urun.isLogon()
+        if self.urun.account_login:
+            self.urun.get_drug()
+        else:
+            self.urun.Login()
+
 class LoginTask(TaskSet):
-    tasks = { ReceteTask:1, UrunTask:1}
+    tasks = { ReceteTask:2, UrunTask:1}
 
     def on_start(self):
         self.login = ITSLogin(self.client)
