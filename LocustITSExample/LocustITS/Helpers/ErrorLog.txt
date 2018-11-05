@@ -1,0 +1,1 @@
+Urun sorgu with gtin and sn, Status code: 200
