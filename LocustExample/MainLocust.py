@@ -18,8 +18,8 @@ def login_post(self):
     self.client.post("/session", {"commit": "Sign in",
                                   "utf8": "✓",
                                   "authenticity_token": auth_token,
-                                  "login": "arife.hos@tigalab.com",
-                                  "password": "arife.hos.1"})
+                                  "login": "",
+                                  "password": ""})
 
 
 def logout(self):
