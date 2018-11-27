@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="857b24e9-c241-4a05-9047-286128346627" name="Default Changelist" comment="Safe mode added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustExample/MainLocust.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocustExample/MainLocust.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/ErrorLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/ErrorLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/GenerateConstantValues.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/GenerateConstantValues.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/RunITS.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/RunITS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustITSExample/LocustITS/MainLocust.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocustITSExample/LocustITS/MainLocust.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/LoginPhase.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/LoginPhase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/ReceteSorguPhase.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/ReceteSorguPhase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/UrunSorguPhase.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/UrunSorguPhase.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,29 +120,32 @@
     <session id="1064311371">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.1" value="3" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="7" />
           <entry key="md" value="3" />
-          <entry key="py" value="34" />
+          <entry key="py" value="50" />
           <entry key="txt" value="43" />
         </counts>
       </usages-collector>
@@ -143,56 +154,67 @@
           <entry key="HTML" value="7" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="43" />
-          <entry key="Python" value="34" />
+          <entry key="Python" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="181" />
           <entry key="dummy" value="1" />
-          <entry key="py" value="8132" />
+          <entry key="py" value="8767" />
           <entry key="txt" value="123" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="124" />
-          <entry key="Python" value="8313" />
+          <entry key="Python" value="8948" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Locust ITS/MainLocust.py">
+        <entry file="file://$PROJECT_DIR$/LocustExample/MainLocust.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="136">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Locust ITS/LoginPhase.py">
+        <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/MainLocust.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="178">
+              <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#77#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Locust ITS/RunITS.py">
+        <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/UrunSorguPhase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="235">
+              <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/ReceteSorguPhase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -216,10 +238,14 @@
       <find>recete</find>
       <find>LogFile</find>
       <find>print</find>
+      <find>self</find>
+      <find>l</find>
     </findStrings>
     <replaceStrings>
       <replace>account_login</replace>
       <replace>log_file</replace>
+      <replace>l</replace>
+      <replace>self</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -254,6 +280,13 @@
         <option value="$PROJECT_DIR$/MainLocust.py" />
         <option value="$PROJECT_DIR$/ReceteSorguPhase.py" />
         <option value="$PROJECT_DIR$/UrunSorguPhase.py" />
+        <option value="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/ReceteSorguPhase.py" />
+        <option value="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/UrunSorguPhase.py" />
+        <option value="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/RunITS.py" />
+        <option value="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/GenerateConstantValues.py" />
+        <option value="$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/LoginPhase.py" />
+        <option value="$PROJECT_DIR$/LocustITSExample/LocustITS/MainLocust.py" />
+        <option value="$PROJECT_DIR$/LocustExample/MainLocust.py" />
       </list>
     </option>
   </component>
@@ -264,10 +297,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1099" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -287,7 +320,13 @@
             <path>
               <item name="Locust" type="b2602c69:ProjectViewProjectNode" />
               <item name="Locust" type="462c0819:PsiDirectoryNode" />
-              <item name="Locust ITS" type="462c0819:PsiDirectoryNode" />
+              <item name="LocustITSExample" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Locust" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Locust" type="462c0819:PsiDirectoryNode" />
+              <item name="LocustITSExample" type="462c0819:PsiDirectoryNode" />
+              <item name="LocustITS" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,7 +364,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.RunITS">
+  <component name="RunManager" selected="Python.RunITS (1)">
     <configuration name="LocustGithub" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="İlk" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -340,6 +379,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LocustGithub.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RunITS (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Locust" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Arife Kübra\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/RunITS.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -395,9 +456,11 @@
     <list>
       <item itemvalue="Python.LocustGithub" />
       <item itemvalue="Python.RunITS" />
+      <item itemvalue="Python.RunITS (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.RunITS (1)" />
         <item itemvalue="Python.RunITS" />
         <item itemvalue="Python.LocustGithub" />
       </list>
@@ -463,14 +526,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49574468" visible="true" weight="0.14474554" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49574468" visible="true" weight="0.18638466" />
       <window_info id="Structure" order="1" sideWeight="0.5042553" side_tool="true" weight="0.25503355" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731544" weight="0.32152975" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40084985" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731544" weight="0.39235127" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46033993" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -478,7 +542,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" sideWeight="0.4986577" weight="0.2407932" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50402683" side_tool="true" weight="0.28611898" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49597314" visible="true" weight="0.2917847" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49597314" visible="true" weight="0.29036826" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4986577" weight="0.46033993" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -522,6 +586,22 @@
     <MESSAGE value="Recete sorgu eklendi ve mainlocust işleyişi değiştirildi" />
     <MESSAGE value="Safe mode added" />
     <option name="LAST_COMMIT_MESSAGE" value="Safe mode added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/LoginPhase.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/LoginPhase.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/LosutGithub.py" />
@@ -571,31 +651,77 @@
     <entry file="file://$PROJECT_DIR$/UrunSorguPhase.py" />
     <entry file="file://$PROJECT_DIR$/LoginPhase.py" />
     <entry file="file://$PROJECT_DIR$/MainLocust.py" />
-    <entry file="file://$PROJECT_DIR$/Locust ITS/MainLocust.py">
+    <entry file="file://$PROJECT_DIR$/Locust ITS/MainLocust.py" />
+    <entry file="file://$PROJECT_DIR$/Locust ITS/LoginPhase.py" />
+    <entry file="file://$PROJECT_DIR$/Locust ITS/RunITS.py" />
+    <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/Log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/RunITS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Locust ITS/LoginPhase.py">
+    <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/LoginPhase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Locust ITS/RunITS.py">
+    <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Helpers/GenerateConstantValues.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="621">
+          <caret line="50" column="93" selection-start-line="50" selection-start-column="93" selection-end-line="50" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/locust/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="357" selection-start-line="357" selection-end-line="357" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LocustExample/MainLocust.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/ReceteSorguPhase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/MainLocust.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LocustITSExample/LocustITS/Phases/UrunSorguPhase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
         </state>
       </provider>
     </entry>

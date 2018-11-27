@@ -22,21 +22,6 @@ def login_post(self):
                                   "password": "arife.hos.1"})
 
 
-def repositories(self):
-    self.client.get("/testtiga?tab=repositories")
-
-
-def profile(self):
-    self.client.get("/testtiga")
-
-
-def getuser(self):
-    text =["/erfdf","/arifekubrahos"]
-    response = self.client.get(random.choice(text), catch_response=True)
-    if not response.ok:
-        response.failure("Get user fail")
-
-
 def logout(self):
     response = self.client.get("/logout")
     pq = BeautifulSoup(response.text)
@@ -51,8 +36,26 @@ def logout_post(self):
                                 "authenticity_token": auth_token })
 
 
+def profile(self):
+    text =['/erfdf','/arifekubrahos']
+    url = random.choice(text)
+    print(url)
+    response = self.client.get(url, catch_response=True)
+    if not response.ok:
+        response.failure("Get user fail")
+
+def search(self):
+    text = ['et','te']
+    variables = {'q': random.choice(text)}
+    response = self.client.get("/search?", params=variables )
+
+
 class UserBehavior(TaskSet):
-    tasks = {repositories: 2, profile: 1, getuser:1}
+    tasks = {profile: 1, search:1}
+
+
+class LoginBehavior(TaskSet):
+    tasks = {UserBehavior:1}
 
     def on_start(self):
         login(self)
@@ -63,7 +66,7 @@ class UserBehavior(TaskSet):
         logout_post(self)
 
 
-class WebsiteUser(HttpLocust):
-    task_set = UserBehavior
+class GithubUser(HttpLocust):
+    task_set = LoginBehavior
     min_wait = 5000
-    max_wait = 9000
+    max_wait = 10000
